@@ -1,0 +1,21 @@
+﻿<Window x:Class="coffee_app.ArticlesProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:coffee_app"
+        mc:Ignorable="d"
+        Title="ArticlesProfile" Height="450" Width="800"
+        Background="#8C7A7A">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Content="Список статей:" FontSize="25" HorizontalAlignment="Center" FontStyle="Italic" Foreground="White"></Label>
+        <ListBox x:Name="Items1" Grid.ColumnSpan="2" Width="750" Height="340" Background="LightGray" VerticalAlignment="Center"></ListBox>
+        <Button Content="Открыть" Width="100" Height="35" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" BorderThickness="5" BorderBrush="#8C7A7A" FontSize="16" Click="Button_Click"></Button>
+        <Button x:Name="button_save" Content="Сохранить" Width="100" Height="35" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" BorderThickness="5" BorderBrush="#8C7A7A" FontSize="16" Click="Button_Click_1"></Button>
+    </Grid>
+</Window>

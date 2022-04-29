@@ -1,0 +1,29 @@
+﻿<Window x:Class="coffee_app.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:coffee_app"
+        mc:Ignorable="d"
+        Title="Профиль" Height="450" Width="800"
+        Background="#8C7A7A">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Добро пожаловать в ваш профиль, " HorizontalAlignment="Center" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center" x:Name="UserName" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Все статьи" Margin="5,23,5.4,283" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Сохраненное" Margin="5,65,5.4,241" Click="Button_Click_2"/>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Список кофеен" Margin="5,105,3.4,201"/>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Редактировать профиль" Margin="5,145,3.4,161"/>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Выйти" Margin="5,183,3.4,123" Click="Button_Click_1"/>
+    </Grid>
+</Window>

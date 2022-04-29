@@ -1,0 +1,27 @@
+﻿<Window x:Class="coffee_app.SavedArticles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:coffee_app"
+        mc:Ignorable="d"
+        Title="Сохраненное" Height="500" Width="850"
+        Background="#8C7A7A">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="name" Height="40" Width="500" Grid.Row="0"></Label>
+        <ListBox x:Name="name_a" Height="360" Width="250" Grid.Row="1" Grid.Column="0" BorderThickness="5" BorderBrush="#8C7A7A"></ListBox>
+        <RichTextBox x:Name="text" Height="350" Width="550" Grid.Row="1" Grid.Column="1"></RichTextBox>
+
+        <Button Grid.Row="2" Grid.Column="1" Width="150" Height="30" Content="Назад" HorizontalAlignment="Right"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Width="150" Height="30" Content="Открыть" HorizontalAlignment="Stretch" Click="Button_Click"></Button>
+    </Grid>
+</Window>
