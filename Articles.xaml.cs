@@ -38,6 +38,7 @@ namespace coffee_app
                 {
                     openArticle.name.Content = i.name;
                     openArticle.text.AppendText(i.text);
+                    openArticle.button_save.Visibility = Visibility.Hidden;
                 }
             }
             openArticle.Show();

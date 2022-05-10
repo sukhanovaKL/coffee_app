@@ -8,9 +8,18 @@
         Title="Администратор" Height="450" Width="800"
         Background="#8C7A7A">
     <Grid>
-        <Button Width="200" Height="30" Content="Добавить статью" Click="Button_Click"></Button>
-        <Button Width="200" Height="30" Content="Перейти к статьям" Margin="297,237,296.6,153" Click="Button_Click_1"></Button>
-        <Button Width="200" Height="30" Content="Назад" Margin="297,277,296.6,113" Click="Button_Click_2"></Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+        <Button Grid.Column="0" Width="200" Height="30" Content="Добавить статью" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Width="200" Height="30" Content="Перейти к статьям" Click="Button_Click_1" Margin="59,231,58.6,159"></Button>
+        <Button Grid.Column="0" Width="200" Height="30" Content="Пользователи" Margin="59,157,58.6,233" Click="Button_Click_3"></Button>
+        <Button Grid.Column="0" Width="200" Height="30" Content="Назад" Click="Button_Click_2" Margin="59,269,58.6,121"></Button>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Image Source="C:\Users\79393\OneDrive\Рабочий стол\КУРСОВАЯ\admin.jpg" />
+        </StackPanel>
     </Grid>
 </Window>

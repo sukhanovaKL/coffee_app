@@ -26,20 +26,12 @@ namespace coffee_app
         public OpenArticle()
         {
             InitializeComponent();
-
-            if (idGuidUser == Guid.Parse("00000000-0000-0000-0000-000000000001"))
-                button_save.IsEnabled = false;
-            else
-                button_save.IsEnabled = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            coffee.SavedArticle.Add(new SavedArticle()
-            {
-                idGuidArticle = idGuidArticle,
-                idGuidUser = idGuidUser
-            });
+            Functions f = new Functions();
+            f.SaveArticle(idGuidUser, idGuidArticle);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

@@ -42,5 +42,11 @@ namespace coffee_app
             MainWindow main = new MainWindow();
             main.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            List_Users users = new List_Users();
+            users.Show();
+        }
     }
 }

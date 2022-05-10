@@ -28,7 +28,6 @@ namespace coffee_app
 
         private void Button_Click(object sender, RoutedEventArgs e) //статьи
         {
-            this.Hide();
             ArticlesProfile articles = new ArticlesProfile();
             articles.idGuidUser = User.idGuid;
             articles.Show();
@@ -45,6 +44,11 @@ namespace coffee_app
         {
             SavedArticles article = new SavedArticles();
             article.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

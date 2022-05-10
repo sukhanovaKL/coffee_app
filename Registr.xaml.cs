@@ -27,10 +27,24 @@ namespace coffee_app
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Functions functions = new Functions();
-            functions.Reg(log.Text, pass.Text, name.Text, surname.Text);
+            if(log.Text == "" || pass.Text == "" || name.Text == "" || surname.Text == "")
+            {
+                MessageBox.Show("Введите данные!");
+            }
+            else
+            {
+                functions.Reg(log.Text, pass.Text, name.Text, surname.Text);
+                this.Hide();
+                Entry entry = new Entry();
+                entry.Show();
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            m.Show();
             this.Hide();
-            Entry entry = new Entry();
-            entry.Show();
         }
     }
 }

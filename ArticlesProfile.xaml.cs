@@ -34,7 +34,6 @@ namespace coffee_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
             OpenArticle openArticle = new OpenArticle();
             foreach (var i in coffee.Article)
             {
@@ -44,6 +43,7 @@ namespace coffee_app
                     openArticle.text.AppendText(i.text);
                     openArticle.idGuidArticle = i.idGuid;
                     openArticle.idGuidUser = idGuidUser;
+                    openArticle.button_save.Visibility = Visibility.Visible;
                 }
             }
             openArticle.Show();

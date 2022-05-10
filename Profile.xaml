@@ -19,10 +19,10 @@
         </Grid.ColumnDefinitions>
         
         <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Добро пожаловать в ваш профиль, " HorizontalAlignment="Center" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
-        <Label Grid.Row="1" HorizontalAlignment="Center" x:Name="UserName" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
+        <Label Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" x:Name="UserName" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Все статьи" Margin="5,23,5.4,283" Click="Button_Click"/>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Сохраненное" Margin="5,65,5.4,241" Click="Button_Click_2"/>
-        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Список кофеен" Margin="5,105,3.4,201"/>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Список кофеен" Margin="5,105,3.4,201" Click="Button_Click_3"/>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Редактировать профиль" Margin="5,145,3.4,161"/>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Выйти" Margin="5,183,3.4,123" Click="Button_Click_1"/>
     </Grid>
