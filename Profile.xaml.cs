@@ -42,7 +42,7 @@ namespace coffee_app
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            SavedArticles article = new SavedArticles();
+            SavedArticles article = new SavedArticles(User.idGuid);
             article.Show();
         }
 

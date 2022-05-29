@@ -97,6 +97,9 @@
     <Compile Include="CoffeeHouse.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CoffeeHouses.xaml.cs">
+      <DependentUpon>CoffeeHouses.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="List_Users.xaml.cs">
       <DependentUpon>List_Users.xaml</DependentUpon>
@@ -137,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ArticlesProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CoffeeHouses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -238,7 +245,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="title.png" />
+    <Resource Include="Photo\admin.jpg" />
+    <Resource Include="Photo\coffee.png" />
+    <Resource Include="Photo\fonMain.png" />
+    <Resource Include="Photo\prof.png" />
+    <Resource Include="Photo\profile.png" />
+    <Resource Include="Photo\title.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

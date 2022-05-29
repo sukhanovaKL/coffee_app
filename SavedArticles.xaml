@@ -21,7 +21,7 @@
         <ListBox x:Name="name_a" Height="360" Width="250" Grid.Row="1" Grid.Column="0" BorderThickness="5" BorderBrush="#8C7A7A"></ListBox>
         <RichTextBox x:Name="text" Height="350" Width="550" Grid.Row="1" Grid.Column="1"></RichTextBox>
 
-        <Button Grid.Row="2" Grid.Column="1" Width="150" Height="30" Content="Назад" HorizontalAlignment="Right"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Width="150" Height="30" Content="Назад" HorizontalAlignment="Right" Click="Button_Click_1"></Button>
         <Button Grid.Row="2" Grid.Column="1" Width="150" Height="30" Content="Открыть" HorizontalAlignment="Stretch" Click="Button_Click"></Button>
     </Grid>
 </Window>

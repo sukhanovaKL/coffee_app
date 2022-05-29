@@ -45,5 +45,11 @@ namespace coffee_app
             Articles article = new Articles();
             article.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            CoffeeHouses coffee = new CoffeeHouses();
+            coffee.Show();
+        }
     }
 }

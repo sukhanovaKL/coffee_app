@@ -6,21 +6,21 @@
         xmlns:local="clr-namespace:coffee_app"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Главная" Height="500" Width="890" Icon="title.png">
+        Title="Главная" Height="500" Width="890" Icon="Photo\title.png">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\79393\OneDrive\Рабочий стол\КУРСОВАЯ\fonMain.png"/>
+        <ImageBrush ImageSource="Photo\fonMain.png"/>
     </Window.Background>
     <Grid Margin="0,0,3.2,0" Height="470" VerticalAlignment="Top">
         <Label Content="Добро пожаловать на кофейную территорию!" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30"></Label>
         <Label Content="Кофе спасет мир!" HorizontalAlignment="Center" FontWeight="Bold" VerticalAlignment="Top" FontSize="30" Margin="10,40"></Label>
-        <Button Content="Список кофеен" Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,144,0,0" FontSize="20" Background="#8C7A7A" Foreground="White"></Button>
+        <Button Content="Список кофеен" Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,144,0,0" FontSize="20" Background="#8C7A7A" Foreground="White" Click="Button_Click_3"></Button>
         <Button Content="Перейти к статьям" Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,204,0,0" FontSize="20" Background="#8C7A7A" Foreground="White" Click="Button_Click_2"></Button>
         <Button Content="Регистрация" Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,260,0,0" FontSize="20" Background="#8C7A7A" Foreground="White" Click="Button_Click_1"></Button>
         <Button Content="Вход" Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,320,0,0" FontSize="20" Background="#8C7A7A" Foreground="White" Click="Button_Click"></Button>
-        <Image Source="C:\Users\79393\OneDrive\Рабочий стол\КУРСОВАЯ\profile.png" Width="75" Height="75" HorizontalAlignment="Right" VerticalAlignment="Top" ></Image>
+        <Image Source="Photo\profile.png" Width="75" Height="75" HorizontalAlignment="Right" VerticalAlignment="Top" ></Image>
         <Button  Width="75" Height="75" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Button_Click">
             <StackPanel>
-                <Image Source="C:\Users\79393\OneDrive\Рабочий стол\КУРСОВАЯ\profile.png" />
+                <Image Source="Photo\profile.png" />
             </StackPanel>
             <Button.Resources>
                 <Style TargetType="Border">

@@ -10,22 +10,32 @@ namespace coffee_app
     public class Functions
     {
         Coffee_AppEntities coffee = new Coffee_AppEntities();
+        int count = 0;
 
         public Functions() { }
 
         public bool Reg(string log, string pass, string name, string surname)
         {
-            coffee.Users.Add(new Users()
+            var logins = coffee.Users.Select(x => x.login);
+            if (!logins.Contains(log))
             {
-                idGuid = Guid.NewGuid(),
-                login = log,
-                pass = pass,
-                name = name,
-                surname = surname,
-                role = "user"
-            });
-            coffee.SaveChanges();
-            return true;
+                coffee.Users.Add(new Users()
+                {
+                    idGuid = Guid.NewGuid(),
+                    login = log,
+                    pass = pass,
+                    name = name,
+                    surname = surname,
+                    role = "user"
+                });
+                coffee.SaveChanges();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Пользователь с таким логином уже есть");
+                return false;
+            }
         }
 
         public bool SignUp(string log, string pass)
@@ -58,11 +68,27 @@ namespace coffee_app
 
         public bool SaveArticle(Guid idUser, Guid idArticle)
         {
-            coffee.SavedArticle.Add(new SavedArticle()
+            count = coffee.SavedArticle.Count();
+            List<Guid?> ArticlesUser = new List<Guid?> ();
+            foreach(var i in coffee.SavedArticle)
             {
-                idGuidArticle = idArticle,
-                idGuidUser = idUser
-            });
+                if (i.idGuidUser == idUser)
+                    ArticlesUser.Add(i.idGuidArticle);
+            }
+            if (!ArticlesUser.Contains(idArticle))
+            {
+                coffee.SavedArticle.Add(new SavedArticle()
+                {
+                    id = ++count,
+                    idGuidArticle = idArticle,
+                    idGuidUser = idUser
+                });
+            }
+            else
+            {
+                MessageBox.Show("Данная статья уже сохранена :)");
+            }
+
             coffee.SaveChanges();
             return true;
         }

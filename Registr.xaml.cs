@@ -33,10 +33,12 @@ namespace coffee_app
             }
             else
             {
-                functions.Reg(log.Text, pass.Text, name.Text, surname.Text);
-                this.Hide();
-                Entry entry = new Entry();
-                entry.Show();
+                if(functions.Reg(log.Text, pass.Text, name.Text, surname.Text) == true)
+                {
+                    this.Hide();
+                    Entry entry = new Entry();
+                    entry.Show();
+                }
             }
         }
 

@@ -21,11 +21,11 @@ namespace coffee_app
     {
         Coffee_AppEntities coffee = new Coffee_AppEntities();
         public Guid idGuidUser;
-        public Guid idGuidArticle;
-        public SavedArticles()
+        //public Guid idGuidArticle;
+        public SavedArticles(Guid idUser)
         {
             InitializeComponent();
-
+            idGuidUser = idUser;
             List<Guid> savedA = new List<Guid>();
             foreach (var u in coffee.SavedArticle)
             {
@@ -52,6 +52,11 @@ namespace coffee_app
                     text.AppendText(i.text);
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Hide();
         }
     }
 }
