@@ -65,6 +65,21 @@ namespace coffee_app
             m.Show();
             return false;
         }
+        public bool EditArticle(Guid idArt, string name, string text)
+        {
+            Article article = new Article();
+            foreach (var i in coffee.Article)
+            {
+                if (i.idGuid == idArt)
+                    article = i;
+            }
+            article.name = name;
+            article.text = text;
+
+            coffee.SaveChanges();
+            MessageBox.Show("Сохранено!");
+            return true;
+        }
 
         public bool SaveArticle(Guid idUser, Guid idArticle)
         {

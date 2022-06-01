@@ -30,8 +30,10 @@ namespace coffee_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string nameText = new TextRange(name.Document.ContentStart, name.Document.ContentEnd).Text;
+            string articleText = new TextRange(text.Document.ContentStart, text.Document.ContentEnd).Text;
             Functions f = new Functions();
-            f.SaveArticle(idGuidUser, idGuidArticle);
+            f.EditArticle(idGuidArticle, nameText, articleText);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

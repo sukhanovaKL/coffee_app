@@ -36,9 +36,11 @@ namespace coffee_app
             {
                 if(i.name == Items.SelectedItem.ToString())
                 {
-                    openArticle.name.Content = i.name;
+                    openArticle.name.AppendText(i.name);
                     openArticle.text.AppendText(i.text);
-                    openArticle.button_save.Visibility = Visibility.Hidden;
+                    openArticle.idGuidArticle = i.idGuid;
+                    if(role.Content.ToString() != "admin")
+                        openArticle.button_save.Visibility = Visibility.Hidden;
                 }
             }
             openArticle.Show();

@@ -13,7 +13,7 @@
             <RowDefinition Height="0.8*"></RowDefinition>
             <RowDefinition Height="0.1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label x:Name="name" Height="40" Width="500" Grid.Row="0" Foreground="White"></Label>
+        <RichTextBox x:Name="name" Height="30" Width="750" Grid.Row="0"></RichTextBox>
         <RichTextBox x:Name="text" Height="300" Width="750" Grid.Row="1"></RichTextBox>
         <Button Grid.Row="2" Width="150" Height="30" Content="Назад" HorizontalAlignment="Right" Click="Button_Click_1"></Button>
         <Button x:Name="button_save" Grid.Row="2" Width="150" Height="30" Content="Сохранить" HorizontalAlignment="Stretch" Click="Button_Click"></Button>

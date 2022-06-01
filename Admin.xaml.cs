@@ -33,6 +33,7 @@ namespace coffee_app
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Articles articles = new Articles();
+            articles.role.Content = "admin";
             articles.Show();
         }
 

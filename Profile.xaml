@@ -17,7 +17,8 @@
             <ColumnDefinition Width="0.2*"></ColumnDefinition>
             <ColumnDefinition Width="0.8*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
+
+        <Image Source="Photo\prof.png" Grid.Column="1" Grid.Row="2"></Image>
         <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Добро пожаловать в ваш профиль, " HorizontalAlignment="Center" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
         <Label Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" x:Name="UserName" FontStyle="Italic" FontSize="20" Foreground="White"></Label>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Все статьи" Margin="5,23,5.4,283" Click="Button_Click"/>

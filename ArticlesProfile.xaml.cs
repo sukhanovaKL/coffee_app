@@ -39,7 +39,7 @@ namespace coffee_app
             {
                 if (i.name == Items1.SelectedItem.ToString())
                 {
-                    openArticle.name.Content = i.name;
+                    openArticle.name.AppendText(i.name);
                     openArticle.text.AppendText(i.text);
                     openArticle.idGuidArticle = i.idGuid;
                     openArticle.idGuidUser = idGuidUser;
