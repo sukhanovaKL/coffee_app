@@ -49,5 +49,11 @@ namespace coffee_app
             List_Users users = new List_Users();
             users.Show();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            CoffeeHousesRedact housesRedact = new CoffeeHousesRedact();
+            housesRedact.Show();
+        }
     }
 }

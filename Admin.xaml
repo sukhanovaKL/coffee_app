@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:coffee_app"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Администратор" Height="450" Width="800"
         Background="#8C7A7A">
     <Grid>
@@ -15,9 +16,9 @@
 
         <Button Grid.Column="0" Width="200" Height="30" Content="Добавить статью" Click="Button_Click"></Button>
         <Button Grid.Column="0" Width="200" Height="30" Content="Перейти к статьям" Click="Button_Click_1" Margin="59,231,58.6,159"></Button>
-        <Button Grid.Column="0" Width="200" Height="30" Content="Назад" Click="Button_Click_2" Margin="59,269,58.6,121"></Button>
+        <Button Grid.Column="0" Width="200" Height="30" Content="Назад" Click="Button_Click_2" Margin="59,304,58.6,86"></Button>
         <Button Grid.Column="0" Width="200" Height="30" Content="Пользователи" Margin="59,157,58.6,233" Click="Button_Click_3"></Button>
-
+        <Button Grid.Column="0" Width="200" Height="30" Content="Редактировать список кофеен" Margin="59,269,58.6,121" Click="Button_Click_4"></Button>
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <Image Source="C:\Users\79393\OneDrive\Рабочий стол\КУРСОВАЯ\admin.jpg" />
         </StackPanel>

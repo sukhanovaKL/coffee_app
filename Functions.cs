@@ -107,5 +107,48 @@ namespace coffee_app
             coffee.SaveChanges();
             return true;
         }
+
+        public bool RegCoffeeHouse(Guid idCoffeeHouse, string name, string text, string adres)
+        {
+            CoffeeHouse house = new CoffeeHouse();
+            foreach(var i in coffee.CoffeeHouse)
+            {
+                if(i.idGuid == idCoffeeHouse)
+                {
+                    house = i;
+                }
+            }
+            house.name = name;
+            house.description = text;
+            house.address = adres;
+            coffee.SaveChanges();
+            MessageBox.Show("Сохранено!");
+            return true;
+        }
+
+        public bool DeleteCoffeeHouse(CoffeeHouse house)
+        {
+            foreach(var i in coffee.CoffeeHouse)
+            {
+                if(house.idGuid == i.idGuid)
+                    coffee.CoffeeHouse.Remove(i);
+            }
+            coffee.SaveChanges();
+            MessageBox.Show("Удалено!");
+            return true;
+        }
+
+        public bool AddCoffeeHouse(string name, string description, string adres)
+        {
+            coffee.CoffeeHouse.Add(new CoffeeHouse()
+            {
+                idGuid = Guid.NewGuid(),
+                name = name,
+                description = description,
+                address = adres
+            });
+            coffee.SaveChanges();
+            return true;
+        }
     }
 }

@@ -82,6 +82,9 @@
     <Compile Include="AddArticle.xaml.cs">
       <DependentUpon>AddArticle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddCoffeeHouse.xaml.cs">
+      <DependentUpon>AddCoffeeHouse.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,9 @@
     </Compile>
     <Compile Include="CoffeeHouses.xaml.cs">
       <DependentUpon>CoffeeHouses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CoffeeHousesRedact.xaml.cs">
+      <DependentUpon>CoffeeHousesRedact.xaml</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="List_Users.xaml.cs">
@@ -131,6 +137,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddCoffeeHouse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CoffeeHouses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CoffeeHousesRedact.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

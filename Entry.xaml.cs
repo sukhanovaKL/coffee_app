@@ -22,8 +22,8 @@ namespace coffee_app
         public Entry()
         {
             InitializeComponent();
-            login.Text = "admin";
-            pass.Text = "0000";
+            login.Text = "ksu";
+            pass.Text = "1234";
 
         }
 

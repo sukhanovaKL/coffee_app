@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:coffee_app"
         mc:Ignorable="d"
-        Title="List_Users" Height="450" Width="800"
+        ResizeMode="NoResize"
+        Title="Список пользователей" Height="450" Width="800"
         Background="#8C7A7A">
     <Grid>
         <Label Content="Список пользователей:" FontSize="25" HorizontalAlignment="Center" FontStyle="Italic" Foreground="White"></Label>

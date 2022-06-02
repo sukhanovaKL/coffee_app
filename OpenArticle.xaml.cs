@@ -30,15 +30,41 @@ namespace coffee_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string nameText = new TextRange(name.Document.ContentStart, name.Document.ContentEnd).Text;
-            string articleText = new TextRange(text.Document.ContentStart, text.Document.ContentEnd).Text;
             Functions f = new Functions();
-            f.EditArticle(idGuidArticle, nameText, articleText);
+            if (role.Content.ToString() == "admin")
+            {
+                string nameText = new TextRange(name.Document.ContentStart, name.Document.ContentEnd).Text;
+                string articleText = new TextRange(text.Document.ContentStart, text.Document.ContentEnd).Text;
+                f.EditArticle(idGuidArticle, nameText, articleText);
+            }
+            if(role.Content.ToString() == "user")
+            {
+                f.SaveArticle(idGuidUser, idGuidArticle);
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            Articles articles = new Articles();
+            if (role.Content != null)
+            {
+                if (role.Content.ToString() == "admin")
+                {
+                    articles.role.Content = "admin";
+                    articles.Show();
+                    Hide();
+                }
+                if (role.Content.ToString() == "user")
+                {
+                    Hide();
+                }
+            }
+            else
+            {
+                articles.Show();
+                Hide();
+            }
         }
     }
 }

@@ -32,18 +32,31 @@ namespace coffee_app
         {
             //this.Hide();
             OpenArticle openArticle = new OpenArticle();
-            foreach (var i in coffee.Article)
+            if(Items.SelectedItem == null)
             {
-                if(i.name == Items.SelectedItem.ToString())
-                {
-                    openArticle.name.AppendText(i.name);
-                    openArticle.text.AppendText(i.text);
-                    openArticle.idGuidArticle = i.idGuid;
-                    if(role.Content.ToString() != "admin")
-                        openArticle.button_save.Visibility = Visibility.Hidden;
-                }
+                MessageBox.Show("Элемент не выбран!");
             }
-            openArticle.Show();
+            else
+            {
+                foreach (var i in coffee.Article)
+                {
+                    if (i.name == Items.SelectedItem.ToString())
+                    {
+                        openArticle.name.AppendText(i.name);
+                        openArticle.text.AppendText(i.text);
+                        openArticle.idGuidArticle = i.idGuid;
+                        if(role.Content != null)
+                        {
+                            if (role.Content.ToString() != "admin")
+                                openArticle.button_save.Visibility = Visibility.Hidden;
+                            else
+                                openArticle.role.Content = "admin";
+                        }
+                    }
+                }
+                openArticle.Show();
+                Hide();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

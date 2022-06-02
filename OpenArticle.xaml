@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:coffee_app"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="OpenArticle" Height="500" Width="800"
         Background="#8C7A7A">
     <Grid>
@@ -15,7 +16,8 @@
         </Grid.RowDefinitions>
         <RichTextBox x:Name="name" Height="30" Width="750" Grid.Row="0"></RichTextBox>
         <RichTextBox x:Name="text" Height="300" Width="750" Grid.Row="1"></RichTextBox>
-        <Button Grid.Row="2" Width="150" Height="30" Content="Назад" HorizontalAlignment="Right" Click="Button_Click_1"></Button>
+        <Button Grid.Row="2" Width="150" Height="30" Content="Назад" HorizontalAlignment="Right" Click="Button_Click_1" Margin="0,8.8,-0.4,8.4"></Button>
+        <Label x:Name="role" Grid.Column="0"  FontSize="25" HorizontalAlignment="Center" FontStyle="Italic" Foreground="#8C7A7A" Margin="392,39,391.6,337.2" Grid.RowSpan="2"></Label>
         <Button x:Name="button_save" Grid.Row="2" Width="150" Height="30" Content="Сохранить" HorizontalAlignment="Stretch" Click="Button_Click"></Button>
     </Grid>
 </Window>
