@@ -52,6 +52,8 @@ namespace coffee_app
                             else
                                 openArticle.role.Content = "admin";
                         }
+                        else
+                            openArticle.button_save.Visibility = Visibility.Hidden;
                     }
                 }
                 openArticle.Show();

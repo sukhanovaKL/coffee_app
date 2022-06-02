@@ -22,30 +22,27 @@ namespace coffee_app
         public Entry()
         {
             InitializeComponent();
-            login.Text = "ksu";
-            pass.Text = "1234";
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
             Functions functions = new Functions();
-            functions.SignUp(login.Text, pass.Text);
+            functions.SignUp(login.Text, pass.Password.ToString());
+            this.Hide();
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.Hide();
             Registr reg = new Registr();
             reg.Show();
+            this.Hide();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Hide();
             MainWindow main = new MainWindow();
             main.Show();
+            this.Hide();
         }
     }
 }

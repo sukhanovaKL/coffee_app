@@ -25,7 +25,7 @@
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Все статьи" Margin="5,23,5.4,283" Click="Button_Click"/>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Сохраненное" Margin="5,65,5.4,241" Click="Button_Click_2"/>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Список кофеен" Margin="5,105,3.4,201" Click="Button_Click_3"/>
-        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Редактировать профиль" Margin="5,145,3.4,161"/>
+        <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Редактировать профиль" Margin="5,145,3.4,161" Click="Button_Click_4"/>
         <Button Grid.Row="2" Grid.Column="0" Width="150" Height="30" Content="Выйти" Margin="5,183,3.4,123" Click="Button_Click_1"/>
     </Grid>
 </Window>

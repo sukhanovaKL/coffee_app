@@ -35,20 +35,25 @@ namespace coffee_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var i in coffee.Users)
+            if (Items.SelectedItem != null)
             {
-                string item = i.name + " " + i.surname + " Логин: " + i.login;
-                if (item == Items.SelectedItem.ToString())
+                foreach (var i in coffee.Users)
                 {
-                    coffee.Users.Remove(i);
+                    string item = i.name + " " + i.surname + " Логин: " + i.login;
+                    if (item == Items.SelectedItem.ToString())
+                    {
+                        coffee.Users.Remove(i);
+                    }
                 }
+                coffee.SaveChanges();
+
+                Items.Items.Clear();
+
+                foreach (var i in coffee.Users)
+                    Items.Items.Add(i.name + " " + i.surname + " Логин: " + i.login);
             }
-            coffee.SaveChanges();
-
-            Items.Items.Clear();
-
-            foreach (var i in coffee.Users)
-                Items.Items.Add(i.name + " " + i.surname + " Логин: " + i.login);
+            else
+                MessageBox.Show("Элемент не выбран!");
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

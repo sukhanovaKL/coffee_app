@@ -45,13 +45,18 @@ namespace coffee_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var i in coffee.Article)
+            if (name_a.SelectedItem != null)
             {
-                if (i.name == name_a.SelectedItem.ToString())
+                foreach (var i in coffee.Article)
                 {
-                    text.AppendText(i.text);
+                    if (i.name == name_a.SelectedItem.ToString())
+                    {
+                        text.AppendText(i.text);
+                    }
                 }
             }
+            else
+                MessageBox.Show("Элемент не выбран");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

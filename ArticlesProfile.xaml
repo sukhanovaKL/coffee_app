@@ -16,7 +16,7 @@
 
         <Label Grid.Column="0" Content="Список статей:" FontSize="25" HorizontalAlignment="Center" FontStyle="Italic" Foreground="White"></Label>
         <ListBox x:Name="Items1" Grid.ColumnSpan="2" Width="750" Height="340" Background="LightGray" VerticalAlignment="Center"></ListBox>
-        <Button Content="Открыть" Width="100" Height="35" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="5" BorderBrush="#8C7A7A" FontSize="16" Click="Button_Click" Margin="0,385,-0.4,0"></Button>
         <Button x:Name="button_save" Content="Сохранить" Width="100" Height="35" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" BorderThickness="5" BorderBrush="#8C7A7A" FontSize="16" Click="Button_Click_1"></Button>
+        <Button Content="Открыть" Width="100" Height="35" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" BorderThickness="5" BorderBrush="#8C7A7A" FontSize="16" Click="Button_Click"></Button>
     </Grid>
 </Window>

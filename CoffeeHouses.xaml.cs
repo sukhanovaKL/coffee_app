@@ -35,14 +35,19 @@ namespace coffee_app
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            foreach(var i in coffee.CoffeeHouse)
+            if (name.SelectedItem != null)
             {
-                if (name.SelectedItem.ToString() == i.name)
+                foreach (var i in coffee.CoffeeHouse)
                 {
-                    text.Document.Blocks.Clear();
-                    text.AppendText(i.description + "\n" + "Адрес:\n" + i.address);
+                    if (name.SelectedItem.ToString() == i.name)
+                    {
+                        text.Document.Blocks.Clear();
+                        text.AppendText(i.description + "\n" + "Адрес:\n" + i.address);
+                    }
                 }
             }
+            else
+                MessageBox.Show("Элемент не выбран!");
         }
     }
 }

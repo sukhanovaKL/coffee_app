@@ -60,13 +60,18 @@ namespace coffee_app
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Functions f = new Functions();
-            foreach (var i in coffee.Article)
+            if (Items1.SelectedItem != null)
             {
-                if (i.name == Items1.SelectedItem.ToString())
+                foreach (var i in coffee.Article)
                 {
-                    f.SaveArticle(idGuidUser, i.idGuid);
+                    if (i.name == Items1.SelectedItem.ToString())
+                    {
+                        f.SaveArticle(idGuidUser, i.idGuid);
+                    }
                 }
             }
+            else
+                MessageBox.Show("Элемент не выбран!");
         }
     }
 }

@@ -48,7 +48,21 @@ namespace coffee_app
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            CoffeeHouses coffee = new CoffeeHouses();
+            coffee.Show();
+        }
 
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            RedactProfile r = new RedactProfile();
+
+            r.name.Text = User.name;
+            r.surname.Text = User.surname;
+            r.password.Text = User.pass;
+            r.login.Text = User.login;
+            r.User = User;
+            r.Show();
+            Hide();
         }
     }
 }
